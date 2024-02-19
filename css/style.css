@@ -1,0 +1,17 @@
+body{
+    background: #F3F5FC;
+}
+
+header{
+    background-color: antiquewhite;
+}
+
+.cabezera{
+    background-color: aqua;
+    width: 90%;
+    margin: auto;
+}
+
+.logo_alura{
+    margin-top: 40px;
+}
