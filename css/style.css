@@ -10,12 +10,7 @@ body{
     font-family: "Inter", sans-serif;
 }
 
-header{
-    background-color: antiquewhite;
-}
-
 .cabezera{
-    background-color: aqua;
     width: 90%;
     margin: auto;
 }
@@ -25,7 +20,6 @@ header{
 }
 
 .contenido{
-    background-color: chocolate;
     width: 80.5%;
     margin: auto 40px auto auto;
     display: grid;
@@ -35,7 +29,6 @@ header{
 }
 
 .contenido-izquierda{
-    background-color: rgb(89, 231, 120);
     height: 85%;
     display: flex;
     flex-direction: column;
@@ -43,6 +36,7 @@ header{
 }
 
 .ingreso-texto{
+    font-family: "Inter", sans-serif;
     width: 80%;
     font-size: 32px;
     color: var(--color-blue);
@@ -53,11 +47,6 @@ header{
 }
 .ingreso-texto::placeholder{
     color: var(--color-blue);
-    font-family: "Inter", sans-serif;
-}
-
-.contenido-izquierda-abajo{
-    background-color: rgba(127, 255, 212, 0.568);
 }
 
 .advertencia{
@@ -77,8 +66,10 @@ header{
     max-width: 328px;
     width: 40%;
     height: 67px;
-    border-radius: 24px;
     font-size: 16px;
+    cursor: pointer;
+    border: 1px solid var(--color-blue);
+    border-radius: 24px;
 }
 
 .btn-encriptar{
@@ -97,29 +88,35 @@ header{
     border-radius: 32px;
     padding: 32px;
     box-sizing: border-box;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 16px;
 }
 
+.contenido-derecha.ajustar{
+    justify-content: space-between;
+}
 
 .muneco{
     width: 100%;
 }
 
-.textos-derecha{
-    text-align: center;
-    margin-top: 32px;
-}
-
 .mensaje{
+    text-align: center;
     font-weight: bold;
     font-size: 24px;
     color: #343A40;
 }
 
+.mensaje.ajustar{
+    height: 70%;
+}
+
 .texto-info{
-    padding-top: 16px;
+    text-align: center;
     font-size: 16px;
     color: #495057;
 }
@@ -135,11 +132,10 @@ header{
 }
 
 footer{
-    background-color: blueviolet;
     height: 50px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 800px) {
     .contenido{
         width: auto;
         margin: auto 40px;
@@ -148,7 +144,7 @@ footer{
     }
 
     .botones-izquierda{
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .btn-encriptar, .btn-desencriptar{
@@ -156,11 +152,17 @@ footer{
     }
 
     .contenido-derecha{
+        max-height: 133px;
         height: 100%;
+        margin-top: 64px;
     }
 
     .muneco{
         display: none;
+    }
+
+    .textos-derecha{
+        margin: 0;
     }
 }
 
@@ -168,5 +170,9 @@ footer{
     .btn-encriptar, .btn-desencriptar{
         max-width: 100%;
         width: 100%;
+    }
+
+    .textos-derecha{
+        margin: auto;
     }
 }
