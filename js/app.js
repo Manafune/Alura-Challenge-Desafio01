@@ -41,8 +41,20 @@ function actualizarTexto(texto) {
 }
 
 function copiar() {
-    let textoCopiado = document.getElementById("txtInfo").innerText;
+    // Selecciona el elemento textarea de solo lectura
+    let textarea = document.getElementById("txtInfo");
+    
+    // Obtiene el texto del textarea
+    let textoCopiado = textarea.value;
+
+    // Copia el texto al portapapeles
     navigator.clipboard.writeText(textoCopiado)
-        .then(() => alert("¡Texto copiado al portapapeles!"))
-        .catch(err => console.error("Error al copiar texto: ", err));
+        .then(() => {
+            // Notifica al usuario que el texto ha sido copiado exitosamente
+            alert("¡Texto copiado éxitosamente!");
+        })
+        .catch(err => {
+            // Maneja cualquier error que pueda ocurrir durante la copia
+            console.error("Error al copiar texto: ", err);
+        });
 }
