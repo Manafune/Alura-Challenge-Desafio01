@@ -19,21 +19,21 @@
     <main>
         <div class="contenido">
             <div class="contenido-izquierda">
-                <textarea class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
+                <textarea cols="10" rows="15" id="ingresoTexto" class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
                 <div class="contenido-izquierda-abajo">
                     <img src="./imagenes/exclamacion.png" alt="Imagen de exclamacion">
                     <p class="advertencia">Solo letras minúsculas y sin acentos</p>
                     <div class="botones-izquierda">
-                        <button class="btn-encriptar">Encriptar</button>
-                        <button class="btn-desencriptar">Desencriptar</button>
+                        <button onclick="encriptar();" class="btn-encriptar">Encriptar</button>
+                        <button onclick="desencriptar();"  class="btn-desencriptar">Desencriptar</button>
                     </div>
                 </div>   
             </div>
-            <div class="contenido-derecha">
-                <img class="muneco" src="./imagenes/Muñeco.png" alt="Imagen del muñeco">
-                <p class="mensaje">Ningún mensaje fue encontrado</p>
-                <p class="texto-info">Ingresa el texto que desees encriptar o desencriptar</p>
-                <button class="btn-copiar oculto">Copiar</button>
+            <div id="ajusteContenido" class="contenido-derecha">
+                <img id="imgDer" class="muneco" src="./imagenes/Muñeco.png" alt="Imagen del muñeco">
+                <p id="mensajeAdv" class="mensaje">Ningún mensaje fue encontrado</p>
+                <p id="txtInfo" class="texto-info">Ingresa el texto que desees encriptar o desencriptar</p>
+                <button onclick="copiar();" id="botonCopiar" class="btn-copiar oculto">Copiar</button>
             </div>
         </div>
     </main>
