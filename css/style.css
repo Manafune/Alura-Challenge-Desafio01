@@ -122,15 +122,23 @@ button:hover {
     color: #343A40;
 }
 
-.mensaje.ajustar{
-    height: 90%;
-    font-weight: normal;
-}
-
 .texto-info{
     text-align: center;
     font-size: 16px;
     color: #495057;
+    background: none;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.texto-info.ajustar{
+    height: 90%;
+    font-weight: normal;
+    font-size: 24px;
 }
 
 .btn-copiar{

@@ -9,11 +9,10 @@ function encriptar() {
 
 
     document.getElementById("imgDer").style.display = "none";
-    let titulo = document.getElementById("txtInfo");
+    let titulo = document.getElementById("mensajeAdv");
     titulo.style.display = "none";
     actualizarTexto(textoEncriptado);
-    document.getElementById("mensajeAdv").classList.add("ajustar");
-    document.getElementById("ajusteContenido").classList.add("ajustarContenido");
+    document.getElementById("txtInfo").classList.add("ajustar");
     
 }
 
@@ -26,15 +25,14 @@ function desencriptar() {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
     document.getElementById("imgDer").style.display = "none";
-    let titulo = document.getElementById("txtInfo");
+    let titulo = document.getElementById("mensajeAdv");
     titulo.style.display = "none";
     actualizarTexto(textoDesencriptado);
-    document.getElementById("mensajeAdv").classList.add("ajustar");
-    document.getElementById("ajusteContenido").classList.add("ajustar");
+    document.getElementById("txtInfo").classList.add("ajustar");
 }
 
 function actualizarTexto(texto) {
-    let mensajeElement = document.getElementById("mensajeAdv");
+    let mensajeElement = document.getElementById("txtInfo");
     mensajeElement.innerHTML = texto;
 
     // Mostrar el botón de copiar
@@ -43,8 +41,8 @@ function actualizarTexto(texto) {
 }
 
 function copiar() {
-    let textoCopiado = document.getElementById("mensajeAdv").innerText;
+    let textoCopiado = document.getElementById("txtInfo").innerText;
     navigator.clipboard.writeText(textoCopiado)
-        .then(() => alert("¡Texto copiado con exito!"))
+        .then(() => alert("¡Texto copiado al portapapeles!"))
         .catch(err => console.error("Error al copiar texto: ", err));
 }
