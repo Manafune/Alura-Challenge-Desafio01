@@ -1,2 +1,2 @@
-<h1>Encriptador de Textos</h1>
-Estado del Proyecto: En desarrollo
+<h1>Encriptador y Desencriptador de Textos</h1>
+Estado del Proyecto: Finalizado
